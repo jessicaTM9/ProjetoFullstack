@@ -1,0 +1,8 @@
+<h2>Lista de Clientes</h2>
+<div *ngFor="let client of clients">
+  <h3>{{client.name}}</h3>
+  <p>Telefone: {{client.phone}}</p>
+  <button (click)="viewClientDetails(client.id)">Detalhes</button>
+  <button (click)="editClient(client.id)">Editar</button>
+  <button (click)="deleteClient(client.id)">Excluir</button>
+</div>

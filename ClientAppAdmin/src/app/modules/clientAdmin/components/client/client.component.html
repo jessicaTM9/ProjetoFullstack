@@ -1,0 +1,28 @@
+<form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Nome:</label>
+    <input type="text" class="form-control" formControlName="name" required>
+  </div>
+  <div class="form-group">
+    <label for="birthDate">Data de Nascimento:</label>
+    <input type="date" class="form-control" formControlName="birthDate" required>
+  </div>
+  <div class="form-group">
+    <label for="cpf">CPF:</label>
+    <input type="text" class="form-control" formControlName="cpf" required>
+  </div>
+  <div class="form-group">
+    <label for="rg">RG:</label>
+    <input type="text" class="form-control" formControlName="rg" required>
+  </div>
+  <div class="form-group">
+    <label for="phone">Telefone:</label>
+    <input type="text" class="form-control" formControlName="phone" required>
+  </div>
+  <!-- <div class="form-group">
+    <label for="address"></label>
+    <app-address formControlName="address"></app-address>
+  </div> -->
+
+  <button type="submit" class="btn btn-primary" [disabled]="!clientForm.valid">Salvar</button>
+</form>

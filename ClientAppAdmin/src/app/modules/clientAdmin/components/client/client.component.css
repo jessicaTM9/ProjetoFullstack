@@ -1,0 +1,45 @@
+/* client.component.css */
+
+:host {
+  display: block;
+  margin: 20px auto;
+  max-width: 600px;
+  }
+
+  h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  }
+
+  form {
+  display: flex;
+  flex-direction: column;
+  }
+
+  form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  }
+
+  form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  }
+
+  form button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  }
+
+  form button[type="submit"]:hover {
+  background-color: #0069d9;
+  }

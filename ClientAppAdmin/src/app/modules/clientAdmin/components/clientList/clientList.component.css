@@ -1,0 +1,34 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th {
+  background-color: #ddd;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+td {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-buttons button {
+  margin-left: 0.5rem;
+}
+
+.add-address-button {
+  margin-top: 1rem;
+}

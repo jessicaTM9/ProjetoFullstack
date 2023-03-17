@@ -1,0 +1,14 @@
+.form-control {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 40px;
+  padding: 6px 12px;
+}
+#street {
+  font-size: 16px;
+}
+
+.neighborhood {
+  font-weight: bold;
+}

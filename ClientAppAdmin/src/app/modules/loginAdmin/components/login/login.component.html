@@ -1,0 +1,23 @@
+<div class="login-form">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="username">Nome de usuário:</label>
+      <input type="text" id="username" formControlName="username" class="form-control">
+      <div *ngIf="loginForm.get('username')?.invalid && (loginForm.get('username')?.dirty || loginForm.get('username')?.touched)">
+        <div *ngIf="loginForm.get('username')?.errors?.required">O nome de usuário é obrigatório.</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Senha:</label>
+      <input type="password" id="password" formControlName="password" class="form-control">
+      <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+        <div *ngIf="loginForm.get('password')?.errors?.required">A senha é obrigatória.</div>
+      </div>
+    </div>
+    <div class="btn-container">
+    <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Entrar</button>
+    <button type="button" class="btn btn-primary btn-cadastro" (click)="goToClientList()">Cadastre-se</button>
+  </div>
+    <div class="alert alert-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
+  </form>
+</div>
