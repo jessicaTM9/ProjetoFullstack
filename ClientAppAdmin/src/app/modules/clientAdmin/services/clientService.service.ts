@@ -9,28 +9,28 @@ import { Client } from '../interfaces/clientInterface';
 })
 export class ClientService {
 
-  private readonly apiUrl = 'http://localhost:4200';
+  private readonly apiUrl = 'https://localhost:5118';
 
-  constructor(private http: HttpClient) { }
+  constructor(private https: HttpClient) { }
 
   getClients(): Observable<Client[]> {
-    return this.http.get<Client[]>(this.apiUrl);
+    return this.https.get<Client[]>(this.apiUrl);
   }
 
   getClient(id: number): Observable<Client> {
-    return this.http.get<Client>(`${this.apiUrl}/${id}`);
+    return this.https.get<Client>(`${this.apiUrl}/${id}`);
   }
 
   createClient(client: Client): Observable<Client> {
-    return this.http.post<Client>(this.apiUrl, client);
+    return this.https.post<Client>(this.apiUrl, client);
   }
 
   updateClient(client: Client): Observable<Client> {
-    return this.http.put<Client>(`${this.apiUrl}/${client.id}`, client);
+    return this.https.put<Client>(`${this.apiUrl}/${client.id}`, client);
   }
 
   deleteClient(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+    return this.https.delete<void>(`${this.apiUrl}/${id}`);
   }
 
 }
