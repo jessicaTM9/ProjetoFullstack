@@ -9,7 +9,10 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'client/:id', component: ClientComponent },
   { path: 'clients', component: ClientListComponent },
+  { path: 'home', redirectTo: '' }, // redireciona a rota 'home' para a rota vazia
+  { path: '**', component: LoginComponent }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
