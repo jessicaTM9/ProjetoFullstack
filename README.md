@@ -7,7 +7,7 @@ Tecnologias utilizadas
 ASP.NET Core 3.1
 Entity Framework Core 3.1
 C#
-Angular 12
+Angular 14.3.0
 
 Pré-requisitos
 .NET Core SDK 3.1 ou superior
